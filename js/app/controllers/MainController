@@ -1,0 +1,19 @@
+function MainController(UserService) {
+  var ctrl = this;
+
+  ctrl.user = '';
+
+  UserService
+    .getUser()
+    .then(function (res){
+      ctrl.user = res.data;
+    });
+
+    .updateUser()
+    .then(function)
+
+}
+
+angular
+  .module('app')
+  .controller('MainController', MainController);
